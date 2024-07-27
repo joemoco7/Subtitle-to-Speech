@@ -1,0 +1,69 @@
+# SubtitleToSpeechApp
+
+SubtitleToSpeechApp is a desktop application that converts subtitles from SRT files into spoken audio using Google Cloud Text-to-Speech (TTS) API. 
+This tool is particularly useful for creating voiceovers for videos, making content accessible for visually impaired users, and generating audiobooks from subtitle files.
+
+
+## Features
+
+- **Voice Selection**: Choose from a variety of voices available through the Google Cloud TTS API.
+- **Preview Voice**: Listen to a preview of the selected voice with customizable speaking rate and pitch settings.
+- **Subtitle Processing**: Automatically processes SRT files to match the timing and duration of subtitles to the generated audio.
+- **Adjustable Speaking Rate**: Set minimum and maximum speaking rates to ensure the speech matches the desired speed.
+- **Advanced Debugging**: Enable advanced debugging to get detailed information about each step of the subtitle processing.
+- **Graphical Representation**: Visualize the voice characteristics and speaking rate adjustments using built-in graphs.
+- **Output Customization**: Select the output directory and filename for the generated audio file.
+
+## Installation
+
+To use SubtitleToSpeechApp, follow these steps:
+
+### Prerequisites
+
+- Python 3.x
+- Google Cloud Text-to-Speech API key
+
+### Steps
+
+1. **Clone the repository**:
+
+   git clone https://github.com/your-username/SubtitleToSpeechApp.git
+   cd SubtitleToSpeechApp
+
+#### Install the required dependencies:
+
+   pip install -r requirements.txt
+
+   Set up Google Cloud Text-to-Speech:
+
+    Create a Google Cloud project and enable the Text-to-Speech API.
+    Download your service account key and set the GOOGLE_APPLICATION_CREDENTIALS environment variable to point to your key file.
+
+    export GOOGLE_APPLICATION_CREDENTIALS="path/to/your/service-account-file.json"
+
+# Usage
+
+   Run the application:
+
+      python subtitle_to_speech_app.py
+
+   Configuration
+
+    Voice Selection: Choose a voice from the dropdown menu.
+    Preview Text: Enter text to preview the selected voice.
+    Speaking Rate and Pitch: Adjust the speaking rate and pitch for the voice preview.
+    SRT Files: Select one or more SRT files to convert.
+    Output Directory and Filename: Choose the location and name for the generated audio file.
+    Min and Max Speaking Rate: Set the minimum and maximum speaking rates for the conversion process.
+
+   Debugging
+
+      Enable advanced debugging to view detailed information about the conversion process, including timing, duration, and rate adjustments. This information can be viewed in the debug tab within the application.
+
+# Contribution
+
+   Contributions are welcome! Please fork the repository and submit a pull request with your improvements. Here's how you can get started:
+
+# License
+
+   This project is licensed under the MIT License. See the LICENSE file for details.
