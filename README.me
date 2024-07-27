@@ -1,17 +1,16 @@
 # SubtitleToSpeechApp
 
-SubtitleToSpeechApp is a desktop application that converts subtitles from SRT files into spoken audio using Google Cloud Text-to-Speech (TTS) API. 
-This tool is particularly useful for creating voiceovers for videos, making content accessible for visually impaired users, and generating audiobooks from subtitle files.
-
+SubtitleToSpeechApp is a desktop application that converts subtitles from SRT subtitle files into spoken audio using Google Cloud Text-to-Speech (TTS) API. 
+This tool is particularly useful for creating voiceovers for videos, primarily intended for easily adding translation dubbing.
 
 ## Features
 
 - **Voice Selection**: Choose from a variety of voices available through the Google Cloud TTS API.
 - **Preview Voice**: Listen to a preview of the selected voice with customizable speaking rate and pitch settings.
 - **Subtitle Processing**: Automatically processes SRT files to match the timing and duration of subtitles to the generated audio.
-- **Adjustable Speaking Rate**: Set minimum and maximum speaking rates to ensure the speech matches the desired speed.
+- **Adjustable Speaking Rate Thresholds**: Set minimum and maximum speaking rates to ensure the speech doesn't exceed a desired speed while trying to match timing. The program should automatically adjust the speed of subsequent line to make up for any accumulated lag.
 - **Advanced Debugging**: Enable advanced debugging to get detailed information about each step of the subtitle processing.
-- **Graphical Representation**: Visualize the voice characteristics and speaking rate adjustments using built-in graphs.
+- **Graphical Representation**: Visualize the chosen voice's characteristics: Its characters-per-minute speaking rate at a given speed multiplier, between 0.5x speed and 2.0x speed. Generally, this is a linear change; but some of the more advanced voices don't quite change linearly. This also accounts for changes between voices in different langauges.
 - **Output Customization**: Select the output directory and filename for the generated audio file.
 
 ## Installation
@@ -52,13 +51,13 @@ To use SubtitleToSpeechApp, follow these steps:
     Voice Selection: Choose a voice from the dropdown menu.
     Preview Text: Enter text to preview the selected voice.
     Speaking Rate and Pitch: Adjust the speaking rate and pitch for the voice preview.
-    SRT Files: Select one or more SRT files to convert.
+    SRT Files: Select the SRT file to convert.
     Output Directory and Filename: Choose the location and name for the generated audio file.
-    Min and Max Speaking Rate: Set the minimum and maximum speaking rates for the conversion process.
+    Min and Max Speaking Rate: Set the minimum and maximum speaking rate thresholds for the conversion process.
 
    Debugging
 
-      Enable advanced debugging to view detailed information about the conversion process, including timing, duration, and rate adjustments. This information can be viewed in the debug tab within the application.
+      Enable the advanced debugging checkbox to view detailed information about the conversion process, including timing, duration, and rate adjustments. This information can be viewed in the debug tab within the application.
 
 # Contribution
 
